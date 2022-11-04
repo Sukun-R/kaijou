@@ -15,4 +15,3 @@ function kaijou(number) {
     }
     return answer;
 }
-/*明日用 margin: 0px 30px ;*/
