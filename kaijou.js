@@ -11,13 +11,19 @@ function calculation() {
 function kaijou(number) {
     let answer = 1;
     for (let i = number; i >= 1; i--) {
-        answer = answer * i;
+        answer = BigInt(answer) * BigInt(i);
         if (answer === Infinity) {
             answer = '上限';
             break;
         }
     }
     return answer;
+}
+
+function value_copy() {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(document.getElementById('answer').value);
+    }
 }
 addEventListener('keydown',
     event => {
