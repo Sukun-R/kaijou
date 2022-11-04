@@ -1,6 +1,11 @@
 function calculation() {
-    value = document.getElementById('value').value
-    document.getElementById('answer').value = kaijou(value);
+    value = parseInt(document.getElementById('value').value)
+    answer = document.getElementById('answer')
+    if (isNaN(value)) {
+        answer.value = "文字式は計算できません｡";
+    } else {
+        answer.value = kaijou(value);
+    }
 }
 
 function kaijou(number) {
@@ -9,9 +14,8 @@ function kaijou(number) {
     for (let i = number; i >= 1; i--) {
         list.push(i);
     }
-    list.reverse();
-    for (let x = list.length; x >= 1; x--) {
-        answer = answer * list[x - 1];
+    for (let x = 0; x <= list.length - 1; x++) {
+        answer = answer * list[x];
     }
     return answer;
 }
