@@ -30,4 +30,7 @@ addEventListener('keydown',
         if (event.keyCode === 13) {
             calculation();
         }
+        if (event.ctrlKey && event.keyCode === 67) {
+            value_copy();
+        }
     })
