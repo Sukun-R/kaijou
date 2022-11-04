@@ -9,13 +9,13 @@ function calculation() {
 }
 
 function kaijou(number) {
-    let list = [];
     let answer = 1;
     for (let i = number; i >= 1; i--) {
-        list.push(i);
-    }
-    for (let x = 0; x <= list.length - 1; x++) {
-        answer = answer * list[x];
+        answer = answer * i;
+        if (answer === Infinity) {
+            answer = '上限';
+            break;
+        }
     }
     return answer;
 }
