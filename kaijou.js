@@ -9,9 +9,9 @@ function calculation() {
 }
 
 function kaijou(number) {
-    let answer = 1;
+    let answer = BigInt(1);
     for (let i = number; i >= 1; i--) {
-        answer = BigInt(answer) * BigInt(i);
+        answer *= BigInt(i);
         if (answer === Infinity) {
             answer = '上限';
             break;
